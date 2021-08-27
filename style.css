@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+    height: 100%;  
+   /* max-width: 1000px; */
+   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+   width: 100%;
+   margin: 4rem 0;
+}
+
+main {
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: var(--primary-dark); */
+    color: white;
+    height: 100%;
+   margin: auto;
+   max-width: 800px;
+   text-align: center;
+   height: 100vh;
+   /* margin-left: 0;   
+   margin-right: 0; */
+}
+
+input,
+label {
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 1rem;
+    border: 0;
+    margin-top: 0.5rem;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: oblique;
+    color: white;
+}
+
+button {
+    margin: 1rem 2rem;
+    color: white;
+    background-color: #191F42;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0rem;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: var(--white);
+    width: 50%;
+    border: 0;
+    box-sizing: border-box;
+    border: 3px solid white;
+}
+
+button:hover {
+    background-color: #4338CA;
+   
+    box-sizing: border-box;
+}
+
+#result {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+
+
+
+.btn-grad {background-image: linear-gradient(to right, #de6161 0%, #2657eb  51%, #de6161  100%)}
+.btn-grad {
+   margin: auto;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center;
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+
+
+
+
+
+ 
+@media screen and (min-width: 320px) and (max-width: 800px) {
+
+
+
+    input,
+    label {
+        display: block;
+        width: 70%;
+        padding: 1rem;
+        font-size: larger;
+        font-weight: bold;
+        border-radius: 1rem;
+        border: 0;
+        margin-top: 0.5rem;
+        margin: auto;
+    }
+
+
+
+    button {
+        margin: 1rem 2rem;
+        color: white;
+        background-color: #191F42;
+        border-radius: 1rem;
+        padding: 0.5rem 0rem;
+        font-size: large;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        color: var(--white);
+        width: 75%;
+        border: 0;
+        box-sizing: border-box;
+        border: 3px solid white;
+    }
+
+}
