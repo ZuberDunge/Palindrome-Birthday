@@ -1,142 +1,131 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+
+:root {
+    --primary-dark: #4338CA;
+    --white: white;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif; 
-    color: white;
-    height: 100%;  
-   /* max-width: 1000px; */
-   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-   width: 100%;
-   margin: 4rem 0;
+    font-family: 'Montserrat', sans-serif;
+   
+    color: var(--white);
+
+
+
+
+    background: #DC2424;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4A569D, #DC2424);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4A569D, #DC2424); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 main {
-    font-family: 'Montserrat', sans-serif;
-    /* background-color: var(--primary-dark); */
-    color: white;
-    height: 100%;
-   margin: auto;
-   max-width: 800px;
-   text-align: center;
-   height: 100vh;
-   /* margin-left: 0;   
-   margin-right: 0; */
+    margin: auto;
+
+    width: fit-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 3rem;
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+    background-color: #191F42;
 }
 
 input,
 label {
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 1rem;
     font-size: larger;
     font-weight: bold;
-    border-radius: 1rem;
-    border: 0;
-    margin-top: 0.5rem;
-    margin: auto;
+    box-sizing: border-box;
 }
 
-h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    font-style: oblique;
-    color: white;
+input {
+   
+    
 }
 
 button {
-    margin: 1rem 2rem;
-    color: white;
+    margin: auto;
+    display: block;
     background-color: #191F42;
     border-radius: 0.5rem;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
     font-size: large;
-    font-weight: 500;
+    font-weight: bold;
+    border: 2px solid white;
     cursor: pointer;
     margin-bottom: 1rem;
-    color: var(--white);
-    width: 50%;
-    border: 0;
+    color:  var(--white);
+}
+
+#result{
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    font-size: larger;
+    font-weight: bold;
+    color: #191F42;
     box-sizing: border-box;
-    border: 3px solid white;
-}
-
-button:hover {
-    background-color: #4338CA;
-   
-    box-sizing: border-box;
-}
-
-#result {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 1rem;
 }
 
 
 
 
-.btn-grad {background-image: linear-gradient(to right, #de6161 0%, #2657eb  51%, #de6161  100%)}
-.btn-grad {
-   margin: auto;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   
-   border-radius: 10px;
-   display: block;
- }
-
- .btn-grad:hover {
-   background-position: right center;
-   color: #fff;
-   text-decoration: none;
- }
-
-
-
-
-
-
-
+/**Footer**/
+.footer {
  
-@media screen and (min-width: 320px) and (max-width: 800px) {
+    background-color: #191F42;
+    color: white;
+    padding: 0.75rem 1rem;
+    text-align: center;
+position: fixed;
+bottom: 0;
+right: 0;
+left: 0;
 
+}
 
+.footer .link {
+    color: white;
+}
 
-    input,
-    label {
-        display: block;
-        width: 70%;
-        padding: 1rem;
-        font-size: larger;
-        font-weight: bold;
-        border-radius: 1rem;
-        border: 0;
-        margin-top: 0.5rem;
-        margin: auto;
-    }
+.footer ul {
+    padding-inline-start: 0px;
+}
 
+.footer-header {
+    font-weight: bold;
+    font-size: large;
+}
 
+.icon-social {
+    font-size: 24px;
 
-    button {
-        margin: 1rem 2rem;
-        color: white;
-        background-color: #191F42;
-        border-radius: 1rem;
-        padding: 0.5rem 0rem;
-        font-size: large;
-        font-weight: 500;
-        cursor: pointer;
-        margin-bottom: 1rem;
-        color: var(--white);
-        width: 75%;
-        border: 0;
-        box-sizing: border-box;
-        border: 3px solid white;
-    }
+}
 
+.footer-list li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+/**lists**/
+.list-non-bullets {
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline;
+    padding-right: 0rem 0.5rem;
+}
+
+.link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
 }
