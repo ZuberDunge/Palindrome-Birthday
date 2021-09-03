@@ -1,3 +1,9 @@
+var dateInput = document.querySelector('#date-input');
+var checkButton = document.querySelector('#check-button');
+var outputBox = document.querySelector('#output-box');
+
+
+
 function reverseStr(str) {
     var listOfChars = str.split('');
     var reverseListOfChars = listOfChars.reverse();
@@ -136,12 +142,10 @@ function reverseStr(str) {
     return [ctr, nextDate];
   }
   
-  var dateInputRef = document.querySelector('#bday-input');
-  var showBtnRef = document.querySelector('#show-btn');
-  var resultRef = document.querySelector('#result');
+ 
   
   function clickHandler(e){
-    var bdayStr = dateInputRef.value; // 2020-10-11
+    var bdayStr = dateInput.value; // 2020-10-11
     
     if(bdayStr !== ''){
       var listOfDate = bdayStr.split('-'); // ['2020', '10', '11']
@@ -155,14 +159,14 @@ function reverseStr(str) {
       var isPalindrome = checkPalindromeForAllDateFormats(date);
   
       if(isPalindrome){
-         resultRef.innerText = 'Yay! your birthday is a palindrome!! 🥳🥳';
+         outputBox.innerText = 'Yay! your birthday is a palindrome!! 🥳🥳';
       }
       else {
         var [ctr, nextDate] = getNextPalindromeDate(date);
   
-        resultRef.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days! 😔`;
+        outputBox.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days! 😔`;
       }
     }
   }
   
-  showBtnRef.addEventListener('click', clickHandler);
+  checkButton.addEventListener('click', clickHandler);
