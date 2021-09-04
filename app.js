@@ -90,10 +90,10 @@ function getNextDate(date) {
 
   var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; 
 
-  
+
   if (month === 2) {
 
-    
+
 
     if (isLeapYear(year)) { // 2020 : true
       if (day > 29) { 
@@ -113,7 +113,7 @@ function getNextDate(date) {
 
   else {
 
- 
+
     if (day > daysInMonth[month - 1]) {
       day = 1;
       month++; 
@@ -168,7 +168,7 @@ function clickHandler(e) {
     } else {
       var [ctr, nextDate] = getNextPalindromeDate(date);
 
-      outputBox.innerText = `NO your bday is not a plaindrome :( you missed it by ${ctr} days! The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
+      outputBox.innerText = `No your bday is not a plaindrome :( you missed it by ${ctr} days! The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
     }
   }
 }
