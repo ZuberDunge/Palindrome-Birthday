@@ -168,7 +168,7 @@ function clickHandler(e) {
     } else {
       var [ctr, nextDate] = getNextPalindromeDate(date);
 
-      outputBox.innerText = ` you missed it by ${ctr} days! The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
+      outputBox.innerText = `NO your bday is not a plaindrome :( you missed it by ${ctr} days! The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
     }
   }
 }
