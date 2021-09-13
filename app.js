@@ -185,6 +185,7 @@ function clickHandler(e) {
         outputBox.style.display = `block`;
         outputBox.innerText = `No your bday is not a plaindrome :( you missed it by ${ctr} days! The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
         }, 3000);
+        
         loadingImg.style.display = `block`;   
         outputBox.innerText = 'Hang on our robot is working on it!';
         outputBox.style.display = `block`;
