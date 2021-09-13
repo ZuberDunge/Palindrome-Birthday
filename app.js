@@ -1,6 +1,7 @@
 var dateInput = document.querySelector('#date-input');
 var checkButton = document.querySelector('#check-button');
 var outputBox = document.querySelector('#output-box');
+var loadingImg  = document.querySelector('.loading-img');
 
 
 
@@ -90,10 +91,10 @@ function getNextDate(date) {
 
   var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; 
 
-  
+
   if (month === 2) {
 
-    
+
 
     if (isLeapYear(year)) { // 2020 : true
       if (day > 29) { 
@@ -113,7 +114,7 @@ function getNextDate(date) {
 
   else {
 
- 
+
     if (day > daysInMonth[month - 1]) {
       day = 1;
       month++; 
@@ -164,13 +165,33 @@ function clickHandler(e) {
     var isPalindrome = checkPalindromeForAllDateFormats(date);
 
     if (isPalindrome) {
-      outputBox.innerText = 'Yay!!! your birthday is palindrome!!';
-    } else {
-      var [ctr, nextDate] = getNextPalindromeDate(date);
 
-      outputBox.innerText = `NO your bday is not a plaindrome :( you missed it by ${ctr} days! The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
+
+      setTimeout(function(){  
+        loadingImg.style.display = `none`;       
+        outputBox.style.display = `block`;    
+        outputBox.innerText = 'Yay!!! your birthday is palindrome!!';
+        }, 3000);
+
+        loadingImg.style.display = `block`;      
+        outputBox.innerText = 'Hang on our robot is working on it!';
+        outputBox.style.display = `block`;
+    } else {
+
+      var [ctr, nextDate] = getNextPalindromeDate(date);
+      setTimeout(function(){  
+
+        loadingImg.style.display = `none`;       
+        outputBox.style.display = `block`;
+        outputBox.innerText = `No your bday is not a plaindrome :( you missed it by ${ctr} days! The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}`;
+        }, 3000);
+        loadingImg.style.display = `block`;   
+        outputBox.innerText = 'Hang on our robot is working on it!';
+        outputBox.style.display = `block`;
+      
+
+     
     }
   }
 }
-
 checkButton.addEventListener('click', clickHandler);
