@@ -140,3 +140,7 @@ left: 0;
    border-radius: 1rem; 
     }
 }
+.loading-img img{
+    width: 100%;
+
+}
